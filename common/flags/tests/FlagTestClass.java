@@ -24,6 +24,6 @@ public class FlagTestClass {
   @FlagDesc(name = "string_test_flag", description = "A flag description")
   public static final Flag<String> stringTestFlag = Flag.create("default value");
 
-  public class ClassWithoutFlags {
-  }
+  public class ClassWithoutFlags {}
 }
+

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
- package com.google.startupos.common;
+package com.google.startupos.common;
 
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.lib.Repository;

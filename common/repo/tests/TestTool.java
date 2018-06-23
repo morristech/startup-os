@@ -25,7 +25,6 @@ import javax.inject.Singleton;
 import com.google.startupos.common.repo.Protos.Commit;
 import com.google.startupos.common.repo.Protos.File;
 
-
 /** Test tool for GitRepo. */
 @Singleton
 public class TestTool {
@@ -84,7 +83,7 @@ public class TestTool {
   }
 
   @Singleton
-  @Component(modules = { CommonModule.class })
+  @Component(modules = {CommonModule.class})
   public interface TestToolComponent {
     TestTool getTestTool();
   }
@@ -93,3 +92,4 @@ public class TestTool {
     DaggerTestTool_TestToolComponent.create().getTestTool().run(args);
   }
 }
+

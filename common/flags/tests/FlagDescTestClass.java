@@ -44,28 +44,28 @@ public class FlagDescTestClass {
 
   @SuppressWarnings("unused")
   @FlagDesc(name = "strings_list_flag", description = "A flag description")
-  public static final Flag<List<String>> stringsListFlag
-      = Flag.createStringsListFlag(Arrays.asList("ab", "cd"));
+  public static final Flag<List<String>> stringsListFlag =
+      Flag.createStringsListFlag(Arrays.asList("ab", "cd"));
 
   @SuppressWarnings("unused")
   @FlagDesc(name = "booleans_list_flag", description = "A flag description")
-  public static final Flag<List<Boolean>> booleansListFlag
-      = Flag.createBooleansListFlag(Arrays.asList(true, false));
+  public static final Flag<List<Boolean>> booleansListFlag =
+      Flag.createBooleansListFlag(Arrays.asList(true, false));
 
   @SuppressWarnings("unused")
   @FlagDesc(name = "integers_list_flag", description = "A flag description")
-  public static final Flag<List<Integer>> integersListFlag
-      = Flag.createIntegersListFlag(Arrays.asList(1, -2));
+  public static final Flag<List<Integer>> integersListFlag =
+      Flag.createIntegersListFlag(Arrays.asList(1, -2));
 
   @SuppressWarnings("unused")
   @FlagDesc(name = "longs_list_flag", description = "A flag description")
-  public static final Flag<List<Long>> longsListFlag
-      = Flag.createLongsListFlag(Arrays.asList(123456789L, -123123123L));
+  public static final Flag<List<Long>> longsListFlag =
+      Flag.createLongsListFlag(Arrays.asList(123456789L, -123123123L));
 
   @SuppressWarnings("unused")
   @FlagDesc(name = "doubles_list_flag", description = "A flag description")
-  public static final Flag<List<Double>> doublesListFlag
-      = Flag.createDoublesListFlag(Arrays.asList(1.23, -3.21));
+  public static final Flag<List<Double>> doublesListFlag =
+      Flag.createDoublesListFlag(Arrays.asList(1.23, -3.21));
 
   @SuppressWarnings("unused")
   @FlagDesc(name = "required_flag", description = "A flag description", required = true)
@@ -78,3 +78,4 @@ public class FlagDescTestClass {
     return stringFlag.get();
   }
 }
+

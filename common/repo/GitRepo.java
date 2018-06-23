@@ -392,3 +392,4 @@ public class GitRepo implements Repo {
     return runCommand("rev-parse --abbrev-ref HEAD").stdout.trim();
   }
 }
+

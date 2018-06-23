@@ -24,7 +24,6 @@ import java.io.IOException;
 import java.lang.Package;
 import java.util.stream.Collectors;
 
-
 /**
  * Static API for creating and reading flags.
  *
@@ -52,7 +51,9 @@ public class Flags {
    */
   public static String[] parse(String[] args, Package... packages) {
     String[] packageNames =
-        Arrays.stream(packages).map(Package::getName).collect(Collectors.toList())
+        Arrays.stream(packages)
+            .map(Package::getName)
+            .collect(Collectors.toList())
             .toArray((new String[0]));
     return parse(args, packageNames);
   }
@@ -111,11 +112,8 @@ public class Flags {
   @VisibleForTesting
   static void setFlagValue(String name, String value) {
     FlagData.Builder builder = instance().getFlag(name).toBuilder();
-    if (builder.getIsListFlag()){
-      builder.setValue(value
-          .replace("[", "")
-          .replace("]", "")
-          .replaceAll(", ", ","));
+    if (builder.getIsListFlag()) {
+      builder.setValue(value.replace("[", "").replace("]", "").replaceAll(", ", ","));
     } else {
       builder.setValue(value);
     }
@@ -164,3 +162,4 @@ public class Flags {
     return parser.parse(args).unusedArgs.toArray(new String[0]);
   }
 }
+

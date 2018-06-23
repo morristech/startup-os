@@ -58,7 +58,7 @@ public class TextDifferencer {
     return unifyTextChanges(allChanges);
   }
 
-  /** Unifies TextChanges from chars into strings  */
+  /** Unifies TextChanges from chars into strings */
   private static ImmutableList<TextChange> unifyTextChanges(List<TextChange> changes) {
     ImmutableList.Builder<TextChange> result = new ImmutableList.Builder<>();
     TextChange.Builder unified = null;

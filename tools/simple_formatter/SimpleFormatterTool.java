@@ -196,3 +196,4 @@ class SimpleFormatterTool {
     System.exit(exit_code);
   }
 }
+
